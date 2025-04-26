@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body, html {
+  overflow-x: hidden;
+}
 body {
     font-family: 'Cairo', 'Montserrat', 'Open Sans', 'Poppins', sans-serif;
     background-color: #f5f5f5;
