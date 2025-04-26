@@ -1,0 +1,51 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>اختر الخدمة | Fawry Media</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Montserrat&family=Open+Sans&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body class="service-choose-page">
+
+  <header>
+    <h1 class="title">ما الخدمة التي ترغب بها؟</h1>
+  </header>
+
+  <section class="services-grid">
+    <div class="service-card" onclick="goTo('chat-logo.html')">
+      <img src="assets/images/logo-icon.png" alt="شعار">
+      <h3>تصميم شعار</h3>
+    </div>
+
+    <div class="service-card" onclick="goTo('identity-step.html')">
+      <img src="assets/images/brand-icon.png" alt="هوية بصرية">
+      <h3>هوية بصرية</h3>
+    </div>
+
+    <div class="service-card" onclick="goTo('website-templates.html')">
+      <img src="assets/images/website-icon.png" alt="موقع إلكتروني">
+      <h3>موقع إلكتروني</h3>
+    </div>
+
+    <div class="service-card" onclick="goTo('social-step.html')">
+      <img src="assets/images/social-icon.png" alt="سوشيال ميديا">
+      <h3>سوشيال ميديا</h3>
+    </div>
+
+    <div class="service-card" onclick="goTo('motion-step.html')">
+      <img src="assets/images/motion-icon.png" alt="فيديو موشن">
+      <h3>فيديو موشن</h3>
+    </div>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function goTo(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>

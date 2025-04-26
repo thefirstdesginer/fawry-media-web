@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم سوشيال ميديا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    margin: -33px 0;
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: column;
+        }
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            max-width: 700px;
+            width: 100%;
+            animation: fadeIn 1s ease;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #5a2dfc;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: #5a2dfc;
+            box-shadow: 0 0 5px rgba(90, 45, 252, 0.3);
+        }
+        .submit-btn, .home-btn {
+            background: #5a2dfc;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .submit-btn:hover, .home-btn:hover {
+            background: #4e24e8;
+            transform: scale(1.03);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .home-btn {
+            background: #ff5e62;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<!-- ✅ الهيدر -->
+<header class="chat-header" data-aos="fade-down" style="width: 100%;">
+ 
+    
+    <div class="container">
+
+        <a href="index.html" class="back-home-btn" title="العودة للرئيسية" style="    top: 39px;">
+            ⬅ العودة للرئيسية
+          </a>
+      <img src="assets/images/My_Logo_H.jpeg" alt="Fawry Media Logo">
+    </div>
+  </header>
+
+<div class="form-container">
+    <h1 >تصميم سوشيال ميديا</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+        <h2>🔵 عن المشروع:</h2>
+        <label>ما اسم الشركة أو البراند؟</label>
+        <input type="text" name="company_name" required>
+
+        <label>ما طبيعة نشاطك أو المنتج/الخدمة؟</label>
+        <textarea name="activity" rows="3" required></textarea>
+
+        <label>هدف الحملة أو التصميم:</label>
+        <textarea name="campaign_goal" rows="3"></textarea>
+
+        <h2>🔵 عن التصميم:</h2>
+        <label>ستايل مفضل أو توجه معين؟</label>
+        <input type="text" name="style">
+
+        <label>ألوان محددة أو الالتزام بالهوية البصرية؟</label>
+        <input type="text" name="colors">
+
+        <label>شعارات أو عناصر تصميم مهمة؟</label>
+        <textarea name="logos_elements" rows="3"></textarea>
+
+        <label>أمثلة لتصاميم أعجبتك؟</label>
+        <textarea name="examples" rows="3"></textarea>
+
+        <h2>🔵 عن الجمهور المستهدف:</h2>
+        <label>الفئة المستهدفة (العمر، الجنس، الاهتمامات، الموقع...)</label>
+        <textarea name="audience" rows="3"></textarea>
+
+        <label>المنصات التي سيتم النشر عليها:</label>
+        <input type="text" name="platforms">
+
+        <h2>🔵 عن المحتوى:</h2>
+        <label>هل لديك نصوص جاهزة أو تحتاج لمساعدة؟</label>
+        <textarea name="texts" rows="3"></textarea>
+
+        <label>صور أو منتجات معينة تريد ظهورها؟</label>
+        <textarea name="products" rows="3"></textarea>
+
+        <label>عروض خاصة أو كلمات مفتاحية معينة؟</label>
+        <textarea name="special_offers" rows="3"></textarea>
+
+        <label>ارفع شعار الشركة:</label>
+        <input type="file" name="logo_upload" accept="image/*" required>
+
+        <button type="submit" class="submit-btn">إرسال للمصمم</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تصميم الهوية البصرية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 30px 20px;
+    }
+    .header {
+      background: #6a0dad;
+      padding: 20px 40px;
+      border-radius: 0 0 20px 20px;
+      color: #fff;
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .header button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #fff;
+      color: #6a0dad;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .header button:hover {
+      background: #f1f1f1;
+    }
+    .form-container {
+      background: #fff;
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 100%;
+      animation: fadeInUp 1s ease;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin: 15px 0 8px;
+      color: #444;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="file"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid #eee;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    input[type="text"]:focus, textarea:focus {
+      border-color: #6a0dad;
+    }
+    .options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 10px 0 20px;
+    }
+    .options button {
+      background: #6a0dad;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .options button.active, .options button:hover {
+      background:#023668;
+      color: #fff;
+    }
+    .send-btn {
+      background: #6a0dad;
+      color: #fff;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+    .send-btn:hover {
+      background: #5a0999;
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+<!-- ✅ الهيدر -->
+<header class="chat-header" data-aos="fade-down">
+    <a href="index.html" class="back-home-btn" title="العودة للرئيسية">
+      ⬅ العودة للرئيسية
+    </a>
+    
+    <div class="container">
+      <img src="assets/images/My_Logo_H.jpeg" alt="Fawry Media Logo">
+      <h1 style="color:white;">تصميم الهوية البصرية</h1>
+    </div>
+  </header>
+
+<div class="form-container">
+  <form>
+    <label>اسم الشركة *</label>
+    <input type="text" required placeholder="اكتب اسم شركتك هنا">
+
+    <label>ارفع شعارك *</label>
+    <input type="file" required accept="image/*">
+
+    <label>هل تمتلك شعار بالفعل؟</label>
+    <div class="options">
+      <button type="button" onclick="chooseYes(this)">نعم</button>
+      <button type="button" onclick="chooseNo(this)">لا</button>
+    </div>
+
+    <div id="extra-fields" style="display:none;">
+      <label>اختر المطبوعات التي تريد تصميمها:</label>
+      <div class="options" id="print-options">
+        <button type="button" onclick="toggleActive(this)">ليتر هيد</button>
+        <button type="button" onclick="toggleActive(this)">ظرف C4</button>
+        <button type="button" onclick="toggleActive(this)">ظرف DL</button>
+        <button type="button" onclick="toggleActive(this)">فاتورة</button>
+        <button type="button" onclick="toggleActive(this)">سند صرف</button>
+        <button type="button" onclick="toggleActive(this)">سند قبض</button>
+        <button type="button" onclick="toggleActive(this)">فولدر</button>
+        <button type="button" onclick="toggleActive(this)">بنر</button>
+      </div>
+
+      <label>ملاحظات إضافية (اختياري):</label>
+      <textarea rows="4" placeholder="اكتب أي ملاحظة هنا..."></textarea>
+    </div>
+
+    <button type="submit" class="send-btn">إرسال للمصمم</button>
+  </form>
+</div>
+
+<script>
+  function toggleActive(btn) {
+    btn.classList.toggle('active');
+  }
+
+  function chooseYes(btn) {
+    document.getElementById('extra-fields').style.display = 'block';
+    btn.classList.add('active');
+    btn.nextElementSibling.classList.remove('active');
+  }
+
+  function chooseNo(btn) {
+    window.location.href = 'Ai-logo-chat-Page.html'; // هتغير الرابط هنا لصفحة الشعار
+  }
+</script>
+
+</body>
+</html>

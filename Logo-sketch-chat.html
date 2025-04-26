@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ابدأ شعارك مع الذكاء الاصطناعي</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .logo-ai-chat {
+      max-width: 800px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    }
+    .chat-step {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .chat-step.active {
+      display: flex;
+    }
+    .chat-step textarea, .chat-step input {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 16px;
+    }
+    .sketch-preview {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .sketch-preview img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+    .submit-btn {
+      background-color: #3b9e77;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #2d7f5f;
+    }
+  </style>
+</head>
+<body>
+  <section class="logo-ai-chat">
+    <h2 style="text-align:center; color:#003366; margin-bottom:20px;">ابدأ تصميم شعارك</h2>
+    <form id="logo-chat-form">
+      <div class="chat-step active" id="step-1">
+        <label>ما هو اسم النشاط التجاري أو اسم المشروع؟</label>
+        <input type="text" name="brandName" required>
+        <button type="button" class="submit-btn" onclick="nextStep()">التالي</button>
+      </div>
+
+      <div class="chat-step" id="step-2">
+        <label>هل هناك رموز أو أشياء تحب تكون داخل الشعار؟</label>
+        <textarea name="elements" rows="3"></textarea>
+        <button type="button" class="submit-btn" onclick="nextStep()">التالي</button>
+      </div>
+
+      <div class="chat-step" id="step-3">
+        <label>هل تفضل ستايل معين (كلاسيكي - حديث - مرح - ...الخ)؟</label>
+        <textarea name="style" rows="2"></textarea>
+        <button type="button" class="submit-btn" onclick="generateSketch()">إنشاء فكرة</button>
+      </div>
+
+      <div class="chat-step" id="step-4">
+        <p>هذه فكرة مبدئية مرسومة يدويًا بناءً على إجاباتك:</p>
+        <div class="sketch-preview" id="sketch-result">
+          <!-- الصورة هتظهر هنا -->
+        </div>
+        <button type="submit" class="submit-btn">إرسال للمصممين</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="../assets/js/sketch-chat.js"></script>
+</body>
+</html>
